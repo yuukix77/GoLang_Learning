@@ -41,4 +41,33 @@ func main() {
 	sort.Sort(sort.Reverse(sort.IntSlice(arrayTest2))) //降序
 	fmt.Println(arrayTest2)
 
+	//map
+	var userMap = map[int]string{
+		1: "yuki",
+		2: "Jerry",
+	}
+	fmt.Println(userMap)
+	fmt.Println(userMap[1])
+	fmt.Printf("%#v\n", userMap[4]) //试试超越下标的，获取空字符串
+
+	var userValue = userMap[1]
+	fmt.Println(userValue)
+	var userValue2, boolValue2 = userMap[2]
+	fmt.Println(userValue2, boolValue2) //两个变量去接Map的Value，第二个会接出来一个bool值
+	var userValue3, boolValue3 = userMap[10]
+	fmt.Printf("%#v,%v\n", userValue3, boolValue3) //两个变量去接Map的Value，第二个会接出来一个bool值
+
+	var stringMap = map[string]string{
+		"wuhu":      "yuki",
+		"guangzhou": "Jerry",
+	}
+	fmt.Println(stringMap)
+	fmt.Println(stringMap["wuhu"])
+
+	stringMap["wuhu"] = "xie"
+	fmt.Println(stringMap)
+
+	delete(stringMap, "wuhu")
+	fmt.Println(stringMap)
+
 }
