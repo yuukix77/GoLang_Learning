@@ -27,6 +27,18 @@ func (s staff2) CalculateSalary() int {
 
 func totalExpense(s []SalaryCalculator) int {
 
+	//类型断言
+	for _, value := range s {
+		switch value.(type) {
+		case staff1:
+			println("员工1正在计算中")
+		case staff2:
+			println("员工2计算中")
+		default:
+			println("未知错误")
+		}
+	}
+
 	expense := 0
 	for _, value := range s {
 		expense = expense + value.CalculateSalary()
