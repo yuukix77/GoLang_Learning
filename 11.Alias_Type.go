@@ -6,7 +6,7 @@ type NetCode int        //类型定制
 type AliasNetCode = int //类型别名
 
 const myNetCode NetCode = 1
-const myAliasNetCode = 1
+const myAliasNetCode AliasNetCode = 1
 
 //区别1：自定义类型可以绑方法，类型别名不能绑方法，也技术不能 func () funcName ()()
 
