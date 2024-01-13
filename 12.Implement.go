@@ -26,6 +26,7 @@ func (s staff2) CalculateSalary() int {
 }
 
 func totalExpense(s []SalaryCalculator) int {
+
 	expense := 0
 	for _, value := range s {
 		expense = expense + value.CalculateSalary()
